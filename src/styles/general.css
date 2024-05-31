@@ -1,0 +1,36 @@
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
+.width90{
+    width: 90%;
+}
+.between{
+    justify-content: space-between;
+}
+.paddingx16{
+    padding: 0 16px;
+}
+.padding16{
+    padding: 16px;
+}
+.paddingb0{
+    padding-bottom: 0;
+}
+.font-l{
+    font-size: large;
+}
+.text-start{
+    text-align: start;
+}
+.margin-auto{
+    margin: auto;
+}
+.center{
+    justify-content: center;
+}
+.margin8{
+    margin: 8px ;
+}

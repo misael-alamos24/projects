@@ -1,0 +1,40 @@
+.a{
+    color: orange
+}
+.a:visited{
+    color: orangered;
+}
+.project-name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.title{
+    font-size: large;
+    padding: 8px;
+}
+.div-button{
+    font-size: large;
+    padding: 4px;
+    border-radius: 16px;
+    /* width: 50%; */
+    margin: 4px auto;
+    cursor: pointer;
+    background-color: gray;
+}
+.div-button:hover{
+    background-color: white;
+}
+.square{
+    border: 1px solid gray;
+    padding: 4px;
+    margin: 8px;
+}
+.project-image{
+    border: 1px solid blueviolet;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.right-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
