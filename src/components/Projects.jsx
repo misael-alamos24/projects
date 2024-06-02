@@ -1,4 +1,4 @@
-import './.css';
+import './project.css';
 import '../styles/general.css';
 import Project from './Project';
 import { objectData } from '.';
