@@ -1,0 +1,19 @@
+.logo-div{
+    background-color: rgb(32, 32, 32);
+}
+.underlined-pointer{
+    cursor: pointer;
+    text-decoration: none;
+    color: gray;
+}
+.underlined-pointer:hover{
+    /* text-decoration: underline; */
+    color: aliceblue;
+}
+.h20{
+    height: 20vh;
+}
+.gmail:hover{
+    box-shadow: 0px 0 4px 4px rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+}

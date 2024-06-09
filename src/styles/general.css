@@ -7,8 +7,17 @@
 .width90{
     width: 90%;
 }
+.width30{
+    width: 30%;
+}
 .between{
     justify-content: space-between;
+}
+.evenly{
+    justify-content: space-evenly;
+}
+.around{
+    justify-content: space-around;
 }
 .paddingx16{
     padding: 0 16px;
@@ -22,6 +31,9 @@
 .font-l{
     font-size: large;
 }
+.bold{
+    font-weight: bold;
+}
 .text-start{
     text-align: start;
 }
@@ -33,4 +45,7 @@
 }
 .margin8{
     margin: 8px ;
+}
+.pointer{
+    cursor: pointer;
 }

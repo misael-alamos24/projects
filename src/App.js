@@ -1,11 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
-import Projects from './components/Projects';
+// import Projects from './components/Projects';
+import Logo from './components/logo/Logo';
 
-function App() {
+function App({inner}) {
   return (
     <div className="App">
-      <Projects/>
+      <Logo/>
+      {/* <Projects/> */}
+      {inner}
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>

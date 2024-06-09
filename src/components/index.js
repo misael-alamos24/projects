@@ -18,7 +18,7 @@ export let objectData = [
                 <Tech title={'React'} src={logo} spin/>
                 <Tech title={'Redux'} src={redux} spin/>
             </div>,
-        explanation: ', como su nombre sugiere, es una aplicación para generar sudokus, con la particularidad de que pueden ser creados sudokus de diferentes tamaños, abarcando desde el rango de 4 x 4 (16 casilleros), hasta 25 x 25 (625 casilleros), pasando por todas las opciones intermedias posibles.',
+        explanation: ' es una aplicación para generar sudokus, con la particularidad de que pueden ser creados sudokus de diferentes tamaños, desde 4 x 4 (16 casilleros), hasta 25 x 25 (625 casilleros).',
         repo:"https://github.com/misael-alamos24/sudoqubs",
         deploy:"https://sudo-qubs-misael-alamos-projects.vercel.app/",
     },

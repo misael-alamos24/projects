@@ -1,0 +1,36 @@
+.input-contact, .button-contact{
+    border: 1px solid purple;
+    border-radius: 24px;
+    padding: 16px;
+    background-color: black;
+    color: white;
+    margin: 16px;
+}
+
+.button-contact:hover{
+    color: orange;
+    background-color: rgb(14, 6, 24);
+}
+
+.w80{
+    width:80%
+}
+
+.h70{
+    min-height: 70vh;
+}
+
+.h10{
+    height: 10vh;
+}
+
+.footer{
+    background-color: rgb(15, 15, 15);
+    color: green;
+}
+
+.flexcol-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
