@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer/Footer';
 // import Projects from './components/Projects';
 import Logo from './components/logo/Logo';
 
@@ -8,7 +9,7 @@ function App({inner}) {
     <div className="App">
       <Logo/>
       {/* <Projects/> */}
-      {inner}
+      <div className='h70'>{inner}</div>
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>
@@ -23,6 +24,7 @@ function App({inner}) {
           Learn React
         </a> */}
       {/* </header> */}
+      <Footer/>
     </div>
   );
 }
