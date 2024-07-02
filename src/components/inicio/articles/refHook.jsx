@@ -77,7 +77,7 @@ export default function RefHook () {
                     Además, logramos tener persitencia de datos que cumplen funciones únicamente lógicas (no visuales) y por ende no necesitan estar representados en pantalla. En consecuencia, no hace falta renderizar el componente por cada cambio que experimenten.
                     <br />
                     <br />
-                    Veamos un ejemplo de caso de uso.
+                    {/* Veamos un ejemplo de caso de uso. */}
             </div>
         </div>
     )
