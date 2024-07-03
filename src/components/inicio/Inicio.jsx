@@ -1,6 +1,6 @@
 // import Default from "./Default";
 
-import RefHook from "./articles/refHook";
+import RefHook from "./articles/RefHook";
 
 export default function Inicio () {
     return (

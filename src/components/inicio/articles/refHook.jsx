@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import useref from '../../../assets/useRef.png';
 
 export default function RefHook () {
@@ -6,22 +6,22 @@ export default function RefHook () {
     // let [one, setOne] = useState(1);
     let initialValue = <span style={{color:'rgb(200,100,100)'}}>'valorInicial'</span>
     let letRef = <code><span style={{color: 'rgb(24,96,188)'}}>let</span> <span style={{color: 'rgb(64,192,224)'}}>ref</span></code>
-    let theRef = <code><span style={{color: 'rgb(64,192,224)'}}>ref</span></code>
+    // let theRef = <code><span style={{color: 'rgb(64,192,224)'}}>ref</span></code>
     let refCurrent = <code ><span style={{color: 'rgb(64,192,224)'}}>ref<span style={{color: 'white'}}>.</span>current</span></code> 
     let aValue = (v) => <code><span style={{color:'rgb(200,100,100)'}}>{v}</span></code>
     let borderCode = (inner) => <code style={{backgroundColor: 'rgb(20,20,20)', borderRadius: '8px', padding: '2px'}}>{inner}</code>
     let blueKeys = (inner) => <><span style={{color: 'rgb(24,96,188)'}}>{'{'}</span>{inner}<span style={{color: 'rgb(24,96,188)'}}>{'}'}</span></>
 
-    let ref = useRef(0); 
+    // let ref = useRef(0); 
 
     // const change = (boolean) => {
     //     if (boolean) {setOne(one+1); ref.current = 10}
     //     if (!boolean) {setOne(one-1); ref.current = 5}
     // }
 
-    // useEffect(()=>{
-    //     console.log(ref.current)
-    // }, [ref])
+    useEffect(()=>{
+        document.getElementById('title-html').innerText = 'Inicio - Desarrollador Web Full Stack';
+    }, [])
 
     return (
         <div>

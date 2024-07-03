@@ -23,12 +23,15 @@ import { RouterProvider } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} /> 
-    {/* <App/>  */}
   </React.StrictMode>
 );
+
+document.getElementById('title-html').innerText = 'Santiago - Desarrollador Web Full Stack';
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
