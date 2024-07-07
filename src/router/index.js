@@ -13,8 +13,8 @@ export const router = createBrowserRouter([
         path: '/Proyectos',
         element: <App inner={<Projects/>}/>
     },
-    {
-        path: '/Contacto',
-        element: <App inner={<Contact/>}/>
-    },
+    // {
+    //     path: '/Contacto',
+    //     element: <App inner={<Contact/>}/>
+    // },
 ])

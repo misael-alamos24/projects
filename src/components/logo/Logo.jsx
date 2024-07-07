@@ -33,7 +33,7 @@ function Nav () {
         <div className='flex evenly bold width30 margin-auto'>
             <a href="/" className='underlined-pointer'>Inicio</a>
             <a href="/Proyectos" className='underlined-pointer'>Proyectos</a>
-            <a href="/Contacto" className='underlined-pointer'>Contacto</a>
+            {/* <a href="/Contacto" className='underlined-pointer'>Contacto</a> */}
             {/* <span></span> */}
         </div>
     )
