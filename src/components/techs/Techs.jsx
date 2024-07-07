@@ -1,6 +1,6 @@
 export default function Tech ({title, src, spin}){
     return (
-        <div title={title}>
+        <div title={title} style={{margin: 'auto 2px', border: '0px solid gray'}}>
             <img src={src} height={'48px'} alt='' className={spin? "App-logo" : ""}/>
         </div>
     )

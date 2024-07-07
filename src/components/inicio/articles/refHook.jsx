@@ -1,5 +1,38 @@
 import { useEffect } from "react";
-import useref from '../../../assets/useRef.png';
+import useref from '../../../assets/useRef.png';// App.js
+import React from 'react';
+import { Controlled as CodeMirror } from 'react-codemirror2';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/theme/material.css';
+
+const App = () => {
+    const [code, setCode] = React.useState('// Write your code here\n');
+    const [data, setData] = React.useState({editor:'', data:'', value:''}); console.log({data})
+
+    return (
+        <div>
+            <CodeMirror
+                value={code}
+                options={{
+                    mode: 'javascript',
+                    theme: 'material',
+                    lineNumbers: true
+                }}
+                onBeforeChange={(editor, data, value) => {
+                    setCode(value);
+                }}
+                onChange={(editor, data, value) => {
+                    setData({editor, data, value})
+                    // You can handle the code change event here
+                }}
+            />
+        </div>
+    );
+};
+
+// export default App;
+
 
 export default function RefHook () {
     
@@ -25,6 +58,7 @@ export default function RefHook () {
 
     return (
         <div>
+            {/* <App/> */}
             <b className="serif">Hooks / useRef</b>
             <div className="flex between">
                 <div className="width100 padding8">
@@ -41,15 +75,39 @@ export default function RefHook () {
                     <br />
                     <br /> */}
                     Sintaxis declarativa: <br />
-                    <code><span style={{color: 'rgb(24,96,188)'}}>let</span> <span style={{color: 'rgb(64,192,224)'}}>ref</span> = <span style={{color: 'rgb(192,192,128)'}}>useRef</span><span style={{color: 'magenta'}}>(</span><span style={{color:'rgb(200,100,100)'}}>'valorInicial'</span><span style={{color: 'magenta'}}>)</span>;</code>
+                    <code>
+                        {/* <span style={{color: 'violet'}}>import</span> 
+                        <span style={{color: 'rgb(192,192,128)'}}>{' { '}</span> 
+                        <span style={{color: 'rgb(64,192,224)'}}>{'useRef'}</span>
+                        <span style={{color: 'rgb(192,192,128)'}}>{' } '}</span> 
+                        <span style={{color: 'violet'}}>from</span> 
+                        <span style={{color:'rgb(200,100,100)'}}>{" 'react'"}</span>;
+                        <br /> */}
+                        <span style={{color: 'rgb(24,96,188)'}}>{'let '}</span> 
+                        <span style={{color: 'rgb(64,192,224)'}}>{'ref '}</span>=
+                        <span style={{color: 'rgb(192,192,128)'}}>{' useRef'}</span>
+                        <span style={{color: 'violet'}}>(</span>
+                        <span style={{color: 'rgb(200,100,100)'}}>'valorInicial'</span>
+                        <span style={{color: 'violet'}}>)</span>;
+                    </code>
                     <br />
                     <br />
-                    La explicación introductoria de la documentación oficial de React define este hook de la siguiente forma: <br /><i>"<b style={{color: 'orange', fontSize: '10px'}}>(1)</b> <u style={{textDecorationColor: 'orange'}}>useRef es un Hook de React que te permite referenciar un valor </u><b style={{color: 'greenyellow', fontSize: '10px'}}>(2)</b> <u style={{textDecorationColor: 'greenyellow'}}>que no es necesario para el renderizado."</u></i> <br />
+                    La explicación introductoria de la documentación oficial de React define este hook de la siguiente forma: <br />
+                    <i>"
+                        <b style={{color: 'orange', fontSize: '10px'}}>(1)</b> 
+                        <u style={{textDecorationColor: 'orange'}}>
+                            useRef es un Hook de React que te permite referenciar un valor 
+                        </u>
+                        <b style={{color: 'greenyellow', fontSize: '10px'}}>(2)</b> 
+                        <u style={{textDecorationColor: 'greenyellow'}}>
+                            que no es necesario para el renderizado."
+                        </u>
+                    </i> 
+                    <br />
                     <br />
                     Esto significa que el valor que introduzcamos como parámetro {borderCode(initialValue)}, será almacenado por {borderCode(letRef)}, con las siguientes particularidades:
-                    <br/>                    <br/>
-                    
-
+                    <br/>                    
+                    <br/>
                     {/* Teniendo en cuenta que <code style={{color: 'rgb(192,192,128)'}}>useRef<span style={{color: 'magenta'}}>()</span></code>, solo recibe un parámetro <code style={{color:'rgb(200,100,100)'}}>valorInicial</code>, aquella explicación significa, que el valor inicial que nosotros le demos a <code style={{color: 'rgb(192,192,128)'}}>useRef<span style={{color: 'magenta'}}>(<code style={{color:'rgb(200,100,100)'}}>'aquí'</code>)</span></code>, sea de tipo string, number, boolean, u object, será guardado en una variable que prevalecerá sin importar cuántas veces el componente se vuelva a renderizar.
                     <br />
                     <br />
@@ -74,10 +132,12 @@ export default function RefHook () {
                     Usar este Hook tiene la particularidad y la ventaja de que podemos guardar un valor tomado en la primera carga del componente y tenerlo almacenado a pesar de que el valor original tal vez haya cambiado posteriormente a la primera carga de nuestro componente. 
                     <br />
                     <br />
-                    Además, logramos tener persitencia de datos que cumplen funciones únicamente lógicas (no visuales) y por ende no necesitan estar representados en pantalla. En consecuencia, no hace falta renderizar el componente por cada cambio que experimenten.
+                    Además, logramos tener persitencia de datos que cumplen funciones únicamente lógicas (no visuales) y por ende no necesitan estar representados en pantalla. En consecuencia, nuestro componente no experimenta auto-renderizados innecesarios por cada vez que se mute la variable {letRef}.
                     <br />
                     <br />
-                    {/* Veamos un ejemplo de caso de uso. */}
+                    Veamos un ejemplo de caso de uso. (Para el autor: si está técnicamente bien dicho "primera carga")
+                    <br />
+                    <br />
             </div>
         </div>
     )

@@ -24,14 +24,32 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
     </style>
     <title id="title-html"></title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <!-- <div id="editor"></div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
+      <script>
+          require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' }});
+          require(['vs/editor/editor.main'], function() {
+              monaco.editor.create(document.getElementById('editor'), {
+                  value: [
+                      'function x() {',
+                      '\tconsole.log("Hello, world!");',
+                      '}'
+                  ].join('\n'),
+                  language: 'javascript'
+              });
+          });
+      </script> -->
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

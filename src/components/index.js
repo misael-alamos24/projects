@@ -6,6 +6,12 @@ import css from '../assets/css.png'
 import Tech from './techs/Techs';
 import html from '../assets/html.webp';
 import registros from '../assets/registros.png';
+import relevamientos from '../assets/relevamientos.png';
+import node from '../assets/node.png';
+// import sequelize from '../assets/sequelize.png';
+// import backend from '../assets/backend.png';
+import sequelize_blueblack from '../assets/sequelize_blueblack.png';
+import SQL from '../assets/SQL.png';
 
 export let objectData = [
     {
@@ -36,4 +42,27 @@ export let objectData = [
             </div>,
         deploy: 'https://registro-precios-misael-alamos-projects.vercel.app/',
     },
-];
+    {
+        projectname: 'Relevamientos de instalaciones',
+        image: relevamientos,
+        explanation: ', es una aplicación web, que tiene como objetivo centralizar textos, imágenes y respuestas binarias relativas al funcionamiento de las instalaciones y los equipos informáticos de cada sector de una empresa. La razón de haber sido creada esta app, o su razón de ser, obedece a consignas formuladas para conformar una prueba de ingreso laboral.',
+        repo: 'https://github.com/santi-misael21/createreactapp',
+        techs: 
+            <div className='flex center padding16'>
+                <Tech title={'HTML'} src={html}/>
+                <Tech title={'CSS'} src={css}/>
+                <Tech title={'JavaScript'} src={js}/>
+                <Tech title={'React'} src={logo} spin/>
+                <Tech title={'Redux'} src={redux} spin/>
+                <Tech title={'Node'} src={node} spin/>
+                {/* <Tech title={'Sequelize'} src={sequelize}/> */}
+                {/* <Tech title={'Node Sequelize SQL'} src={backend}/> */}
+                <Tech title={'Sequelize'} src={sequelize_blueblack}/>
+                <Tech title={'SQL'} src={SQL}/>
+                
+                
+
+            </div>,
+        deploy: 'https://createreactapp-brown.vercel.app/',
+    },
+]; 
