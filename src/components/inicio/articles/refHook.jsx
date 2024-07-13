@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import useref from '../../../assets/useRef.png';// App.js
 import React from 'react';
 import { Controlled as CodeMirror } from 'react-codemirror2';
@@ -6,7 +6,7 @@ import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/theme/material.css';
 
-const App = () => {
+export const App = () => {
     const [code, setCode] = React.useState('// Write your code here\n');
     const [data, setData] = React.useState({editor:'', data:'', value:''}); console.log({data})
 
@@ -138,7 +138,80 @@ export default function RefHook () {
                     Veamos un ejemplo de caso de uso. (Para el autor: si está técnicamente bien dicho "primera carga")
                     <br />
                     <br />
+                    <Cronos/>
             </div>
+        </div>
+    )
+}
+
+function Cronos () {
+
+    let segRef = useRef(new Date().toLocaleTimeString().toString());
+    let minRef = useRef(new Date().toLocaleTimeString().toString().slice(0,-3));
+    // let cancelRef = useRef();
+    let [time, setTime] = useState(); //console.log({time});
+
+    useEffect(()=>{
+        setTime(segRef.current);
+        handleStartClick();
+    }, []);
+
+    function handleStartClick() {
+        // const intervalId = 
+        setInterval(() => {
+            segRef.current = new Date().toLocaleTimeString().toString();
+            let aux = segRef.current;
+            // console.log(aux.slice(0,-3), minRef.current)
+            if (aux.slice(0,-3) !== minRef.current) {
+                segRef.current = new Date().toLocaleTimeString().toString();
+                minRef.current = new Date().toLocaleTimeString().toString().slice(0,-3);
+                setTime(new Date().toLocaleTimeString().toString());
+            }
+        }, 1000);
+        // cancelRef.current = intervalId;
+    }
+
+    return (
+        <div className="flex between" style={{border: '1px solid grey', padding: '4px'}}>
+            <div style={{color: 'gray', width: '50%', padding: '4px'}}>
+
+            <b>Aplicación simple: </b>
+            Tenemos un reloj que renderiza la hora y los minutos, sin los segundos.
+            <br />
+            Solo al colocar el mouse sobre la hora, se muestran también los segundos.
+            <br/> 
+            <br/> 
+            <b>¿Cómo se logra?</b>
+            <br/>
+            Esta configuración tiene un setInterval que permite actualizar la hora cada un segundo.
+            Entonces, cada 1 segundo, la hora actual es guardada en una 'ref', la cual no actualiza el browser por cada segundo transcurrido. 
+            <br />
+            <br />
+            <b>¿Por qué funciona así?</b>
+            <br />
+            Esto reduce la cantidad de veces que el componente se actualiza. Haciéndolo solo ante dos condiciones:
+            <br />
+            1. Cuando el mouse se coloca sobre la hora.
+            <br />
+            2. Cuando los minutos cambian. 
+            <br />
+            De esa manera el componente no sufre renderizaciones cada 1 segundo, sino cada 1 minuto, conservando la posibilidad de renderizar los segundos exactos en momentos puntuales (al colocar el mouse sobre la hora).
+            Esta aplicación podría ser útil para features que precisen mostrar la hora.
+            <br/> 
+
+            {/* Las horas, minutos y segundos, son guardados por useRef, por cada segundo transcurrido.
+            <br />
+            Ahora bien, al hacer onMouseOver (apoyar la flecha) sobre el div que muestra la hora,
+            este renderiza un estado, con la intención de ver en un title horas, minutos y segundos. */}
+            </div>
+            <div onMouseOver={()=> setTime(segRef.current)} title={time} style={{
+                backgroundColor: 'rgb(24,24,24)', padding: '16px', borderRadius: '16px', display: 'flex', justifyContent: 'center', margin: 'auto', fontFamily: 'serif'
+            }}>
+                <h1> 
+                    {time && time.slice(0,-3)}
+                </h1>
+            </div>
+            {/* <button onClick={()=> clearInterval(cancelRef.current)}>Clear Clock Interval</button> */}
         </div>
     )
 }

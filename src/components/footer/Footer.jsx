@@ -1,3 +1,5 @@
+import '../contact/contact.css';
+
 export default function Footer () {
     return (
         <div className="h10 footer">
