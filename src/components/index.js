@@ -13,7 +13,7 @@ import node from '../assets/node.png';
 import sequelize_blueblack from '../assets/sequelize_blueblack.png';
 import SQL from '../assets/SQL.png';
 import canislupus from '../assets/canislupus.png';
-import bunker_store from '../assets/bunkerstore';
+import bunker_store from '../assets/bunkerstore.png';
 
 export let objectData = [
     {
