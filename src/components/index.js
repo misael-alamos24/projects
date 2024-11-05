@@ -12,6 +12,7 @@ import node from '../assets/node.png';
 // import backend from '../assets/backend.png';
 import sequelize_blueblack from '../assets/sequelize_blueblack.png';
 import SQL from '../assets/SQL.png';
+// import bunker_store from '../assets/bunkerstore';
 
 export let objectData = [
     {
@@ -64,5 +65,28 @@ export let objectData = [
 
             </div>,
         deploy: 'https://createreactapp-brown.vercel.app/',
+    },
+    {
+        projectname: 'Búnker Store',
+        image: '',
+        explanation: ', es un almacén virtual, que concentra el stock disponible del mismo, para que el cliente pueda realizar pedidos a domicilio mediante el sitio, también responsivo para un móvil.',
+        repo: 'https://github.com/misael-alamos24/projects',
+        techs: 
+            <div className='flex center padding16'>
+                <Tech title={'HTML'} src={html}/>
+                <Tech title={'CSS'} src={css}/>
+                <Tech title={'JavaScript'} src={js}/>
+                <Tech title={'React'} src={logo} spin/>
+                <Tech title={'Redux'} src={redux} spin/>
+                <Tech title={'Node'} src={node} spin/>
+                {/* <Tech title={'Sequelize'} src={sequelize}/> */}
+                {/* <Tech title={'Node Sequelize SQL'} src={backend}/> */}
+                <Tech title={'Sequelize'} src={sequelize_blueblack}/>
+                <Tech title={'SQL'} src={SQL}/>
+                
+                
+
+            </div>,
+        deploy: 'https://bunker-store.vercel.app/',
     },
 ]; 
