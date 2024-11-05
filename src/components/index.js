@@ -12,6 +12,7 @@ import node from '../assets/node.png';
 // import backend from '../assets/backend.png';
 import sequelize_blueblack from '../assets/sequelize_blueblack.png';
 import SQL from '../assets/SQL.png';
+import canislupus from '../assets/canislupus.png';
 
 export let objectData = [
     {
@@ -65,4 +66,28 @@ export let objectData = [
             </div>,
         deploy: 'https://createreactapp-brown.vercel.app/',
     },
+    {
+        projectname: 'Canis Lupus',
+        image: canislupus,
+        explanation: ', es una aplicación web, que tiene como objetivo dar la posibilidad de publicar y reservar perros-lobo domésticos. La aplicación fue creada de manera minimalista para ser presentada a un posible cliente. Mas al no ser confirmada su realización, permaneció confeccionada de ese modo.',
+        repo: 'https://github.com/santi-misael21/canislupus',
+        techs: 
+            <div className='flex center padding16'>
+                <Tech title={'HTML'} src={html}/>
+                <Tech title={'CSS'} src={css}/>
+                <Tech title={'JavaScript'} src={js}/>
+                <Tech title={'React'} src={logo} spin/>
+                <Tech title={'Redux'} src={redux} spin/>
+                <Tech title={'Node'} src={node} spin/>
+                {/* <Tech title={'Sequelize'} src={sequelize}/> */}
+                {/* <Tech title={'Node Sequelize SQL'} src={backend}/> */}
+                <Tech title={'Sequelize'} src={sequelize_blueblack}/>
+                <Tech title={'SQL'} src={SQL}/>
+                
+                
+
+            </div>,
+        deploy: 'https://canis-lupus.vercel.app/ejemplares',
+    },
 ]; 
+
