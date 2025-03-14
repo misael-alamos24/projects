@@ -85,3 +85,30 @@
     display: block;
   }
 }
+.resp-nav {
+  display: flex;
+}
+@media screen and (max-width: 400px) {
+  .resp-nav {
+    display: block;
+  }
+}
+.resp-nav .h-img {
+  height: 120px;
+}
+.hrefs {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 600px) {
+  .hrefs {
+    display: block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .media {
+    display: flex;
+    margin: auto;
+    width: 100%;
+  }
+}
