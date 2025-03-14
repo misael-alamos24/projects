@@ -83,7 +83,7 @@ export let objectData = [
         projectname: 'Búnker Store',
         image: bunker_store,
         explanation: ', es un almacén virtual, que concentra el stock disponible del mismo, para que el cliente pueda realizar pedidos a domicilio mediante el sitio, también responsivo para un móvil.',
-        repo: 'https://github.com/misael-alamos24/projects',
+        repo: 'https://github.com/misael-alamos24/store',
         techs: 
             <div className='flex center padding16'>
                 <Tech title={'HTML'} src={html}/>
