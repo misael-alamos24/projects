@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {router} from './router/index';
 import { RouterProvider } from 'react-router-dom';
+import './css/index.css';
 // import App from './App';
 
 // const puppeteer = require('puppeteer');
