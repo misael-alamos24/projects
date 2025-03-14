@@ -1,3 +1,9 @@
+.a{
+    color: orange
+}
+.a:visited{
+    color: orangered;
+}
 .flex{
     display: flex;
 }
@@ -25,8 +31,14 @@
 .paddingx16{
     padding: 0 16px;
 }
+.paddingx8{
+    padding: 0 8px;
+}
 .padding16{
     padding: 16px;
+}
+.padding8{
+    padding: 8px;
 }
 .paddingb0{
     padding-bottom: 0;
@@ -48,6 +60,9 @@
 }
 .margin8{
     margin: 8px ;
+}
+.margin4{
+    margin: 4px ;
 }
 .pointer{
     cursor: pointer;

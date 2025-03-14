@@ -1,9 +1,4 @@
-.a{
-    color: orange
-}
-.a:visited{
-    color: orangered;
-}
+
 .project-name{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -37,4 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.minw90{
+    min-width: 246px;
 }

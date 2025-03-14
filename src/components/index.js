@@ -20,7 +20,7 @@ export let objectData = [
         projectname: 'Sudoqubs',
         image: sudoqubs,
         techs: 
-            <div className='flex center padding16'>
+            <div className='resp-tech center padding16'>
                 <Tech title={'JavaScript'} src={js}/>
                 <Tech title={'CSS'} src={css}/>
                 <Tech title={'React'} src={logo} spin/>
@@ -36,7 +36,7 @@ export let objectData = [
         explanation: ', es una app web para registrar datos en forma de tabla. Para crearla se usó solamente JavaScript y HTML.',
         repo: 'https://github.com/misael-alamos24/registroprecios',
         techs: 
-            <div className='flex center padding16'>
+            <div className='resp-tech center padding16'>
                 <Tech title={'HTML'} src={html}/>
                 <Tech title={'Vanilla JavaScript'} src={js}/>
                 <Tech title={'CSS'} src={css}/>
@@ -50,7 +50,7 @@ export let objectData = [
         explanation: ', es una aplicación web, que tiene como objetivo centralizar textos, imágenes y respuestas binarias relativas al funcionamiento de las instalaciones y los equipos informáticos de cada sector de una empresa. La razón de haber sido creada esta app, o su razón de ser, obedece a consignas formuladas para conformar una prueba de ingreso laboral.',
         repo: 'https://github.com/santi-misael21/createreactapp',
         techs: 
-            <div className='flex center padding16'>
+            <div className='resp-tech center padding16'>
                 <Tech title={'HTML'} src={html}/>
                 <Tech title={'CSS'} src={css}/>
                 <Tech title={'JavaScript'} src={js}/>
@@ -71,7 +71,7 @@ export let objectData = [
         repo: 'https://github.com/santi-misael21/canislupus',
         deploy: 'https://canis-lupus.vercel.app/ejemplares',
         techs: 
-            <div className='flex center padding16'>
+            <div className='resp-tech center padding16'>
                 <Tech title={'HTML'} src={html}/>
                 <Tech title={'CSS'} src={css}/>
                 <Tech title={'JavaScript'} src={js}/>
@@ -85,7 +85,7 @@ export let objectData = [
         explanation: ', es un almacén virtual, que concentra el stock disponible del mismo, para que el cliente pueda realizar pedidos a domicilio mediante el sitio, también responsivo para un móvil.',
         repo: 'https://github.com/misael-alamos24/store',
         techs: 
-            <div className='flex center padding16'>
+            <div className='resp-tech center padding16'>
                 <Tech title={'HTML'} src={html}/>
                 <Tech title={'CSS'} src={css}/>
                 <Tech title={'JavaScript'} src={js}/>
